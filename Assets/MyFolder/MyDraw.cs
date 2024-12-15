@@ -120,26 +120,34 @@ public class MyDraw : MonoBehaviour
     {
         int centerX = (int)centerPixel.x;
         int centerY = (int)centerPixel.y;
+
         int width = _drawTexture.width;
         int height = _drawTexture.height;
 
-        // 펜 두께(penRadius)만큼 주변 픽셀을 반복하며 칠함
+        int radiusSquared = penRadius * penRadius; // 반지름 제곱값 미리 계산
+
         for (int x = centerX - penRadius; x <= centerX + penRadius; x++)
         {
-            // 텍스처 범위를 벗어나면 건너뛰기
             if (x < 0 || x >= width) continue;
             for (int y = centerY - penRadius; y <= centerY + penRadius; y++)
             {
                 if (y < 0 || y >= height) continue;
 
-                // 2D좌표(x,y)를 1D 인덱스로 변환
-                int index = y * width + x;
+                // 원 범위 체크
+                int dx = x - centerX;
+                int dy = y - centerY;
+                int distSquared = dx * dx + dy * dy;
 
-                // 픽셀 색상 변경
-                _currentPixels[index] = color;
+                if (distSquared <= radiusSquared)
+                {
+                    // 원 내부 픽셀에만 색칠
+                    int index = y * width + x;
+                    _currentPixels[index] = color;
+                }
             }
         }
     }
+
 
     /// <summary>
     /// 변경된 _currentPixels 배열을 실제 텍스처에 적용
