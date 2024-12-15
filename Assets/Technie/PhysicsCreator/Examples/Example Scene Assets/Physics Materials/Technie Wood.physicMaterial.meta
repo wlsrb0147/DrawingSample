@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bc79df39e28ae834cab415b38df8af2e
+timeCreated: 1487516202
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 217070
+  packageName: Technie Collider Creator 2
+  packageVersion: 1.2.1
+  assetPath: Assets/Technie/PhysicsCreator/Examples/Example Scene Assets/Physics
+    Materials/Technie Wood.physicMaterial
+  uploadId: 635387

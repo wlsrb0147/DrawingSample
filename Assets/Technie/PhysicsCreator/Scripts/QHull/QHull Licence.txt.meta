@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1b82c593e227ceb4d9bcf0cfbd7164ad
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 217070
+  packageName: Technie Collider Creator 2
+  packageVersion: 1.2.1
+  assetPath: Assets/Technie/PhysicsCreator/Scripts/QHull/QHull Licence.txt
+  uploadId: 635387

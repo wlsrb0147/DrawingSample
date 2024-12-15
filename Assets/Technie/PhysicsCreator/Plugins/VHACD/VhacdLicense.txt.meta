@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f65f5c37d5cf69a449e43a023e8349f1
+timeCreated: 1611076221
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 217070
+  packageName: Technie Collider Creator 2
+  packageVersion: 1.2.1
+  assetPath: Assets/Technie/PhysicsCreator/Plugins/VHACD/VhacdLicense.txt
+  uploadId: 635387

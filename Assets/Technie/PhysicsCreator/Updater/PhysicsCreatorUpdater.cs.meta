@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: bbdd3eb8e86f18a489f2fead242cd570
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 217070
+  packageName: Technie Collider Creator 2
+  packageVersion: 1.2.1
+  assetPath: Assets/Technie/PhysicsCreator/Updater/PhysicsCreatorUpdater.cs
+  uploadId: 635387
