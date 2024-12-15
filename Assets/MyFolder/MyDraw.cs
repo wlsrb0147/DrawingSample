@@ -13,14 +13,7 @@ public class MyDraw : MonoBehaviour
     private Vector2 _previousPixelPos = Vector2.zero; // 이전 드래그 픽셀 위치 (선 연결용)
     private Color32[] _currentPixels;       // 텍스처의 픽셀 데이터(수정용)
     private Camera mainCam;                 // 메인 카메라 참조
-
-    /// <summary>
-    /// 외부(UI)에서 슬라이더 등으로 펜 두께를 변경할 때 호출하는 메서드.
-    /// PenManager를 통해 펜 두께를 변경한다.
-    /// </summary>
-    /// <param name="width">슬라이더로부터 받은 부동소수점 값</param>
     
-
     private void Awake()
     {
         // 이 오브젝트에 있는 SpriteRenderer 참조 획득
@@ -63,8 +56,8 @@ public class MyDraw : MonoBehaviour
                 _currentPixels ??= _drawTexture.GetPixels32();
 
                 // 펜 속성(PenColor, PenWidth)을 PenManager에서 획득
-                Color penColor = PenManager.Instance != null ? PenManager.Instance.GetPenColor() : Color.white;
-                int penWidth = PenManager.Instance != null ? PenManager.Instance.GetPenWidth() : 5;
+                Color penColor = PenManager.Instance ? PenManager.Instance.GetPenColor() : Color.white;
+                int penWidth = PenManager.Instance ? PenManager.Instance.GetPenWidth() : 5;
 
                 // 이전 드래그 위치(_previousPixelPos)가 없었다면(즉, 드래그 시작)
                 // 현재 점 주변만 칠함
