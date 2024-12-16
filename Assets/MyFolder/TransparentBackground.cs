@@ -6,7 +6,7 @@ public class TransparentBackground : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Texture2D _texture;
     private Color32[] _cleanPixels; // 초기화용 투명 픽셀 배열
-
+    private MyDraw _draw;
     void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -19,6 +19,7 @@ public class TransparentBackground : MonoBehaviour
             // 모든 픽셀을 투명 (0,0,0,0)으로 설정
             _cleanPixels[i] = new Color32(0,0,0,0);
         }
+        _draw = GetComponent<MyDraw>();
     }
 
     void Start()
@@ -31,5 +32,6 @@ public class TransparentBackground : MonoBehaviour
     {
         _texture.SetPixels32(_cleanPixels);
         _texture.Apply();
+        _draw.SetCurrentPixels(null);
     }
 }

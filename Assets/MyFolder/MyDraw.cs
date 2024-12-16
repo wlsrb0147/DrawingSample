@@ -13,6 +13,11 @@ public class MyDraw : MonoBehaviour
     private Vector2 _previousPixelPos = Vector2.zero; // 이전 드래그 픽셀 위치 (선 연결용)
     private Color32[] _currentPixels;       // 텍스처의 픽셀 데이터(수정용)
     private Camera mainCam;                 // 메인 카메라 참조
+
+    public void SetCurrentPixels(Color32[] pixels)
+    {
+        _currentPixels = pixels;
+    }
     
     private void Awake()
     {
